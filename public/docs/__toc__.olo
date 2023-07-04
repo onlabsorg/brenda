@@ -1,0 +1,5 @@
+<% items = [
+   {title: "Home"      , uri: "/"    },
+   {title: "Document 1", uri: "/doc1"},
+   {title: "Document 2", uri: "/doc2"}
+] %>

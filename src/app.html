@@ -1,0 +1,25 @@
+<v-app>
+
+  <v-app-bar :elevation="2">
+    <v-app-bar-nav-icon
+        variant="text"
+        @click.stop="drawer = !drawer">
+    </v-app-bar-nav-icon>
+    <v-app-bar-title>{{title}}</v-app-bar-title>
+  </v-app-bar>
+
+  <v-navigation-drawer v-model="drawer" location="left" permanent>
+    <v-list>
+      <v-list-item v-for="item in toc"
+        :title="item.title"
+        :href="'#'+item.uri">
+      </v-list-item>
+    </v-list>
+  </v-navigation-drawer>
+
+
+  <v-main>
+    <v-container class="olo-document" v-html="saneHTML"></v-container>
+  </v-main>
+
+</v-app>
